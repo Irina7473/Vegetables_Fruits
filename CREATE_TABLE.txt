@@ -1,0 +1,29 @@
+
+CREATE TABLE table_vegetables_fruits
+(
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT ,
+    name TEXT NOT NULL ,
+    type TEXT NOT NULL ,
+    color TEXT NOT NULL ,
+    calories INTEGER NOT NULL
+
+);
+
+INSERT INTO table_vegetables_fruits (id, name, type, color, calories) VALUES (1, '€блоко', 'фрукт', 'зеленый', 46);
+INSERT INTO table_vegetables_fruits (id, name, type, color, calories) VALUES (2, 'виноград', '€года', 'зеленый', 70);
+INSERT INTO table_vegetables_fruits (id, name, type, color, calories) VALUES (3, 'банан', 'фрукт', 'желтый', 90);
+INSERT INTO table_vegetables_fruits (id, name, type, color, calories) VALUES (4, 'огурец', 'овощ', 'зеленый', 15);
+INSERT INTO table_vegetables_fruits (id, name, type, color, calories) VALUES (5, 'кабачок', 'овощ', 'зеленый', 18);
+INSERT INTO table_vegetables_fruits (id, name, type, color, calories) VALUES (6, 'томат', 'овощ', 'красный', 20);
+INSERT INTO table_vegetables_fruits (id, name, type, color, calories) VALUES (7, 'апельсин', 'фрукт', 'оранжевый', 45);
+INSERT INTO table_vegetables_fruits (id, name, type, color, calories) VALUES (8, 'морковь', 'овощ', 'оранжевый', 33);
+INSERT INTO table_vegetables_fruits (id, name, type, color, calories) VALUES (9, 'свекла', 'овощ', 'красный', 40);
+INSERT INTO table_vegetables_fruits (id, name, type, color, calories) VALUES (10, 'клюква', '€года', 'красный', 28);
+
+INSERT INTO table_vegetables_fruits (name, type, color, calories) VALUES ('смородина', '€года', 'черный', 42)
+INSERT INTO table_vegetables_fruits (name, type, color, calories) VALUES ('редис', 'овощ', 'красный', 20)
+INSERT INTO table_vegetables_fruits (name, type, color, calories) VALUES ('баклажан', 'овощ', 'синий', 44)
+INSERT INTO table_vegetables_fruits (name, type, color, calories) VALUES ('груша', 'фрукт', 'желтый', 44)
+INSERT INTO table_vegetables_fruits (name, type, color, calories) VALUES ('хурма', 'фрукт', 'оранжевый', 65)
+INSERT INTO table_vegetables_fruits (name, type, color, calories) VALUES ('черника', '€года', 'черный', 36)
+INSERT INTO table_vegetables_fruits (name, type, color, calories) VALUES ('слива', 'фрукт', 'синий', 40)
