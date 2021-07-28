@@ -15,9 +15,14 @@ namespace VegetablesAndFruits
             Console.WriteLine();
             VF.ShowAllNames();
             Console.WriteLine();
-            //VF.ShowAllColors();
+            VF.ShowAllColors();
             Console.WriteLine();
-
+            VF.ShowMaxCalories();
+            Console.WriteLine();
+            VF.ShowMinCalories();
+            Console.WriteLine();
+            VF.ShowMiddleCalories();
+            Console.WriteLine();
         }
     }
 }
