@@ -9,4 +9,10 @@
     <PackageReference Include="Microsoft.Data.Sqlite" Version="5.0.8" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="vegetables_ fruits_db.sqlite">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

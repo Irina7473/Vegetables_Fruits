@@ -15,14 +15,25 @@ namespace VegetablesAndFruits
             Console.WriteLine();
             VF.ShowAllNames();
             Console.WriteLine();
+            VF.NumberPlantType();
+            Console.WriteLine();
+
             VF.ShowAllColors();
             Console.WriteLine();
+            VF.NumberPlantColor();
+            Console.WriteLine();
+            VF.NumberPlantColor("желтый");
+            Console.WriteLine();
+
             VF.ShowMaxCalories();
             Console.WriteLine();
             VF.ShowMinCalories();
             Console.WriteLine();
             VF.ShowMiddleCalories();
             Console.WriteLine();
+            VF.ShowRangCalories(40, 60);
+            Console.WriteLine();
+
         }
     }
 }
