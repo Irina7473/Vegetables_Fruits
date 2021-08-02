@@ -172,8 +172,7 @@ namespace VegetablesAndFruits
                 Console.WriteLine("Нет данных");
                 return null;
             }
-
-            Console.WriteLine("В базе данных есть следующие цвета");
+                        
             var colors = new List<string>();
             do
             {
@@ -198,40 +197,10 @@ namespace VegetablesAndFruits
 
         public void ShowAllColors()
         {
-            /*_connection.Open();
-            _query.CommandText = "SELECT color FROM table_vegetables_fruits;";            
-            var result = _query.ExecuteReader();
-
-            if (!result.HasRows)
-            {
-                Console.WriteLine("Нет данных");
-                return;
-            }
-
             Console.WriteLine("В базе данных есть следующие цвета");
-            var colors = new List<string>();
-            do 
-            {                
-                while (result.Read())
-                {
-                    bool selection = true;
-                    var color = result.GetString(0);                    
-                    if (colors != null)
-                        foreach (var col in colors)
-                        {
-                            if (col == color) selection = false;
-                            if (!selection) break;
-                        }
-                    if(selection)colors.Add(color);                
-                }
-            }  while (result.NextResult());*/
-
             var colors = this.AllColors();
             foreach (var color in colors) Console.WriteLine($" {color}");
             Console.WriteLine(" --------------------------------------------");
-
-
-
         }
 
         public void NumberPlantColor()
@@ -276,9 +245,9 @@ namespace VegetablesAndFruits
 
         public void NumberPlantColor(string speccolor)
         {
-            var count = 0;
+            var count = 0;            
             _connection.Open();
-            _query.CommandText = "SELECT color FROM table_vegetables_fruits WHERE color={speccolor};";
+            _query.CommandText = $"SELECT color FROM table_vegetables_fruits;";
             var result = _query.ExecuteReader();
 
             if (!result.HasRows)
@@ -291,13 +260,14 @@ namespace VegetablesAndFruits
             {
                 while (result.Read())
                 {
-                    count++;
+                    var color = result.GetString(0);
+                    if (color == speccolor) count++;
                 }
             } while (result.NextResult());
 
             if (result != null) result.Close();
             _connection.Close();
-
+            
             Console.WriteLine($"В базе данных плодов цвета {speccolor} - {count}");
             Console.WriteLine(" --------------------------------------------");
         }
@@ -411,7 +381,7 @@ namespace VegetablesAndFruits
         public void ShowRangCalories(int lower, int upper)
         {            
             _connection.Open();
-            _query.CommandText = "SELECT name, calories FROM table_vegetables_fruits WHERE calories>{lower} AND calories<{upper};";
+            _query.CommandText = $"SELECT name, calories FROM table_vegetables_fruits WHERE calories>{lower} AND calories<{upper};";
             var result = _query.ExecuteReader();
 
             if (!result.HasRows)
@@ -436,5 +406,4 @@ namespace VegetablesAndFruits
 
             Console.WriteLine(" --------------------------------------------");
         }
-    }
-}
+    }}

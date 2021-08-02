@@ -9,7 +9,7 @@ namespace VegetablesAndFruits
             Console.WriteLine("  *** База данных овощей, фруктов, ягод ***");
             Console.WriteLine();
             var VF=new DB(@"G:\STEP\Vegetables_Fruits\vegetables_fruits_db.sqlite");
-            VF.Open();            
+                       
             Console.WriteLine();
             VF.ShowAll();
             Console.WriteLine();
@@ -22,7 +22,7 @@ namespace VegetablesAndFruits
             Console.WriteLine();
             VF.NumberPlantColor();
             Console.WriteLine();
-            VF.NumberPlantColor("желтый");
+            VF.NumberPlantColor("зеленый");
             Console.WriteLine();
 
             VF.ShowMaxCalories();
@@ -33,7 +33,6 @@ namespace VegetablesAndFruits
             Console.WriteLine();
             VF.ShowRangCalories(40, 60);
             Console.WriteLine();
-
         }
     }
 }
